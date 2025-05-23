@@ -10,7 +10,6 @@ require (
 	github.com/spf13/cobra v1.9.1
 	github.com/spf13/viper v1.20.1
 	github.com/spf13/viper/remote v1.20.1
-	github.com/vivasoft-ltd/golang-course-utils v0.0.4
 	gorm.io/driver/mysql v1.5.7
 	gorm.io/gorm v1.26.0
 )
