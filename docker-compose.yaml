@@ -5,6 +5,8 @@ services:
     ports:
       - "8500:8500"
       - "8600:8600/udp"
+    volumes:
+      - ./docs/consul/data:/consul/data
 
   db:
     image: mysql:8.0
@@ -17,6 +19,7 @@ services:
       - ${DB_PORT}:3306
     volumes:
       - db_data:/var/lib/mysql
+      - ./docs/db:/docker-entrypoint-initdb.d
     networks:
       - event_network
     healthcheck:

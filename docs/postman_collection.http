@@ -1,0 +1,47 @@
+# event-management
+
+###
+@url = http://localhost:8080
+# group: events
+# @name Create Event
+POST {{url}}/v1/events
+Content-Type: application/json
+
+{
+  "title": "Golang class: 005",
+  "description": "Project Structure kickoff",
+  "location": "Office",
+  "start_time": "2025-05-17T10:00:00Z",
+  "end_time": "2025-05-17T11:00:00Z",
+  "created_by": "bob@example.com"
+}
+
+###
+# group: events
+# @name Read Event By ID
+GET {{url}}/v1/events/3
+
+###
+# group: events
+# @name Update Event
+PUT {{url}}/v1/events/2
+Content-Type: application/json
+
+{
+  "title": "Golang Course Class:6",
+  "description": "Project Structure kickoff",
+  "location": "Office",
+  "start_time": "2025-05-14T10:00:00Z",
+  "end_time": "2025-05-14T11:00:00Z",
+  "created_by": "alice@example.com"
+}
+
+###
+# group: events
+# @name Delete Event
+DELETE {{url}}/v1/events/1
+
+###
+# group: events
+# @name List Events
+GET {{url}}/v1/events
