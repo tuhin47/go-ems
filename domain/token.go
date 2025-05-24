@@ -1,6 +1,6 @@
 package domain
 
-import "github.com/vivasoft-ltd/go-ems/types"
+import "github.com/tuhin47/go-ems/types"
 
 type (
 	TokenService interface {

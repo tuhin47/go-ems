@@ -2,8 +2,8 @@ package methodutil
 
 import (
 	"github.com/dgrijalva/jwt-go"
-	"github.com/vivasoft-ltd/go-ems/config"
-	"github.com/vivasoft-ltd/go-ems/utils/errutil"
+	"github.com/tuhin47/go-ems/config"
+	"github.com/tuhin47/go-ems/utils/errutil"
 	"strconv"
 )
 

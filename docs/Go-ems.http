@@ -1,0 +1,135 @@
+# Go-ems
+
+###
+@url = http://localhost:8080
+@token =
+# group: User
+# @name Signup
+POST {{url}}/v1/users/signup
+Content-Type: application/json
+
+{
+  "email": "john@eample.com",
+  "password": "12345",
+  "first_name": "karim",
+  "last_name": "islam"
+}
+
+###
+# group: User
+# @name Create User
+POST {{url}}/v1/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI5OWU2ZGNkNC04ZGEwLTQxYzgtOGY3ZC03OGVkYTZlYzg0ZmMiLCJleHAiOjE3NDgxNzUxOTAsInJpZCI6Ijg1NDhhYTM1LTkxNTMtNDg2Zi05OTYxLTEyNjg3YTU0ZDk1MiIsInVpZCI6Mn0.OLFb9Ij0aXFuHEJw6ibqDjXiYmlz6zZqSoHH3SLUflA
+Content-Type: application/json
+
+{
+  "email": "manager3@vivasoftltd.com",
+  "password": "12345",
+  "first_name": "Event",
+  "last_name": "Manager",
+  "role_id": 2
+}
+
+###
+# group: User
+# @name Update User
+PUT {{url}}/v1/users/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiJkNjFlYWIxNi0xNzBiLTRkMjYtODA1MS0yYjNlY2RjNzFiNDciLCJleHAiOjE3NDc5MjMzMzIsInJpZCI6ImRhOGVmMGFiLWZlNDktNDYwNC1iMzBiLTQ5MGQyY2Q4Zjg4ZCIsInVpZCI6MX0.D24K8YCqz2swNnmr3EzNikqFP-XbOOt2Dn7GSc9Xupw
+Content-Type: application/json
+
+{
+  "email": "manager@vivasoftltd.com",
+  "password": "12345",
+  "first_name": "Event3",
+  "last_name": "Manager",
+  "role_id": 2
+}
+
+###
+# group: User
+# @name Delete User
+DELETE {{url}}/v1/users/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiJlZDVjMDhmNi04YzZlLTQxNGUtOGNmYi0xYTA2NDE4MDQ0ZGMiLCJleHAiOjE3NDc5MTc0NDQsInJpZCI6IjlkYWExYjc1LTg5YzgtNGYyNS04NTM3LTZiN2UwMzQ1MDMyMiIsInVpZCI6MX0.eM324_LNV4FffLeBLilJM-naF4Jn-NNDaOdrLV7bnL0
+
+###
+# group: User
+# @name Get User
+GET {{url}}/v1/users/6
+Authorization: Bearer {{token}}
+
+###
+# group: User
+# @name Get Paginated Users
+GET {{url}}/v1/users/?
+    limit=100&
+    page=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiIxYjIzYzdmYS0zMTRhLTQ3ZmItYjVkZC0wNGIyYmU4ZDZiZjIiLCJleHAiOjE3NDgwMTg2MjcsInJpZCI6IjI3ZjllYjYyLThiY2EtNGIyZS1iNDA1LWFlOTJhMjg5NGIxZiIsInVpZCI6Nn0.4zvvLkVe0NLZTnZeZ4XFKVvKzTkXFcY5K1ZWFB_IYuM
+
+###
+# group: User
+# @name Profile
+GET {{url}}/v1/users/profile
+Authorization: Bearer {{access_token}}
+
+###
+# group: Auth
+# @name Login
+POST {{url}}/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "john@eample.com",
+  "password": "12345"
+}
+
+> {%
+    client.global.set("token", response.body?.access_token);
+%}
+###
+# group: Auth
+# @name Logout
+POST http://localhost:8080/v1/auth/logout
+
+###
+# group: events
+# @name Create Event
+POST {{url}}/v1/events
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiIzMjgxMzEzNi05ZGI2LTQwM2ItYWViZi1kOGQwZDg1NmNkMjAiLCJleHAiOjE3NDgwMjEzMTgsInJpZCI6IjIyMWJkOTdmLTE5YjEtNDFhYi1hZjJmLWVjNzk4OTVkOWQzYyIsInVpZCI6Mn0.qpl5hLiiMBpX3LRjt5wnjYvp_5lJiVOL4JYN8N2_jLM
+Content-Type: application/json
+
+{
+  "title": "Project Structure kickoff",
+  "description": "Introduction to the course. Incebreaking seesion for trainer and students",
+  "location": "Office",
+  "start_time": "2025-05-14T10:00:00Z",
+  "end_time": "2025-05-14T11:00:00Z"
+}
+
+###
+# group: events
+# @name Read Event By ID
+GET {{url}}/v1/events/1
+
+###
+# group: events
+# @name Update Event
+PUT {{url}}/v1/events/2
+Content-Type: application/json
+
+{
+  "title": "Golang Course Class:6",
+  "description": "Project Structure kickoff",
+  "location": "Office",
+  "start_time": "2025-05-14T10:00:00Z",
+  "end_time": "2025-05-14T11:00:00Z"
+}
+
+###
+# group: events
+# @name Delete Event
+DELETE {{url}}/v1/events/1
+
+###
+# group: events
+# @name List Events
+GET {{url}}/v1/events

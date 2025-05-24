@@ -2,11 +2,11 @@ package services
 
 import (
 	"errors"
-	"github.com/vivasoft-ltd/go-ems/consts"
-	"github.com/vivasoft-ltd/go-ems/domain"
-	"github.com/vivasoft-ltd/go-ems/models"
-	"github.com/vivasoft-ltd/go-ems/types"
-	"github.com/vivasoft-ltd/go-ems/utils/errutil"
+	"github.com/tuhin47/go-ems/consts"
+	"github.com/tuhin47/go-ems/domain"
+	"github.com/tuhin47/go-ems/models"
+	"github.com/tuhin47/go-ems/types"
+	"github.com/tuhin47/go-ems/utils/errutil"
 )
 
 type EventServiceImpl struct {
@@ -139,7 +139,7 @@ func (svc *EventServiceImpl) RsvpEvent(request types.RsvpEventRequest) error {
 	if err != nil {
 		return err
 	}
-	if *event.Limit > 0 && count >= *event.Limit {
+	if event.Limit != nil && *event.Limit > 0 && count >= *event.Limit {
 		return errutil.ErrEventCapacityExceeded
 	}
 

@@ -7,7 +7,7 @@
     "host": "127.0.0.1",
     "port": "3306",
     "user": "gladiator",
-    "pass": "gladius",
+    "pass": "root",
     "schema": "event_management",
     "maxIdleConn": 1,
     "maxOpenConn": 2,
@@ -19,7 +19,13 @@
     "port": "6379",
     "pass": "password123",
     "db": 2,
-    "mandatoryPrefix": "event_management_"
+    "mandatoryPrefix": "event_management_",
+    "accessUuidPrefix": "access-uuid_",
+    "refreshUuidPrefix": "refresh-uuid_",
+    "userPrefix": "user_",
+    "permissionPrefix": "permissions_",
+    "userCacheTTL": 3600,
+    "permissionCacheTTL": 86400
   },
   "asynq": {
     "redisAddr": "127.0.0.1:6379",
@@ -34,5 +40,11 @@
   "logger": {
     "level": "debug",
     "filePath": "app.log"
+  },
+  "jwt": {
+    "accessTokenSecret": "b7f8e2c1-4a3d-4e8b-9c2a-7f6e5d4c3b2a",
+    "refreshTokenSecret": "e9d4c3b2-a1f7-4e6d-8c3b-2a1e9d4c3b2f",
+    "accessTokenExpiry": 3600,
+    "refreshTokenExpiry": 86400
   }
 }

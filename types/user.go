@@ -3,8 +3,8 @@ package types
 import (
 	v "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
-	"github.com/vivasoft-ltd/go-ems/consts"
-	"github.com/vivasoft-ltd/go-ems/models"
+	"github.com/tuhin47/go-ems/consts"
+	"github.com/tuhin47/go-ems/models"
 )
 
 type (

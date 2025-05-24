@@ -2,7 +2,7 @@ package conn
 
 import (
 	"github.com/hibiken/asynq"
-	"github.com/vivasoft-ltd/go-ems/config"
+	"github.com/tuhin47/go-ems/config"
 )
 
 var asyncClient *asynq.Client
