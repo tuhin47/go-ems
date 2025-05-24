@@ -1,7 +1,7 @@
 package domain
 
 import (
-	"github.com/vivasoft-ltd/go-ems/types"
+	"github.com/tuhin47/go-ems/types"
 )
 
 type (

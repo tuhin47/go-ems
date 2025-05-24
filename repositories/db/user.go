@@ -1,8 +1,8 @@
 package db
 
 import (
-	"github.com/vivasoft-ltd/go-ems/models"
-	"github.com/vivasoft-ltd/go-ems/types"
+	"github.com/tuhin47/go-ems/models"
+	"github.com/tuhin47/go-ems/types"
 )
 
 func (repo *Repository) CreateUser(user *models.User) (*models.User, error) {

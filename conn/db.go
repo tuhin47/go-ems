@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/vivasoft-ltd/go-ems/config"
-	log "github.com/vivasoft-ltd/golang-course-utils/logger"
+	"github.com/tuhin47/go-ems/config"
+	log "github.com/tuhin47/golang-course-utils/logger"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

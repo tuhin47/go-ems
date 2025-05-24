@@ -3,7 +3,7 @@ package middlewares
 import (
 	"fmt"
 	"github.com/labstack/echo/v4"
-	"github.com/vivasoft-ltd/go-ems/types"
+	"github.com/tuhin47/go-ems/types"
 )
 
 func CurrentUserFromCtx(c echo.Context) (*types.CurrentUser, error) {

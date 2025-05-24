@@ -1,11 +1,11 @@
 package services
 
 import (
-	"github.com/vivasoft-ltd/go-ems/consts"
-	"github.com/vivasoft-ltd/go-ems/domain"
-	"github.com/vivasoft-ltd/go-ems/types"
-	"github.com/vivasoft-ltd/go-ems/utils/errutil"
-	"github.com/vivasoft-ltd/golang-course-utils/logger"
+	"github.com/tuhin47/go-ems/consts"
+	"github.com/tuhin47/go-ems/domain"
+	"github.com/tuhin47/go-ems/types"
+	"github.com/tuhin47/go-ems/utils/errutil"
+	"github.com/tuhin47/golang-course-utils/logger"
 	"golang.org/x/crypto/bcrypt"
 )
 

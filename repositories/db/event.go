@@ -3,9 +3,9 @@ package db
 import (
 	"errors"
 	"fmt"
-	"github.com/vivasoft-ltd/go-ems/models"
-	"github.com/vivasoft-ltd/go-ems/utils/errutil"
-	"github.com/vivasoft-ltd/golang-course-utils/logger"
+	"github.com/tuhin47/go-ems/models"
+	"github.com/tuhin47/go-ems/utils/errutil"
+	"github.com/tuhin47/golang-course-utils/logger"
 	"gorm.io/gorm"
 )
 

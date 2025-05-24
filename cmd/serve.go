@@ -3,13 +3,13 @@ package cmd
 import (
 	"github.com/labstack/echo/v4"
 	"github.com/spf13/cobra"
-	"github.com/vivasoft-ltd/go-ems/conn"
-	"github.com/vivasoft-ltd/go-ems/controllers"
-	"github.com/vivasoft-ltd/go-ems/middlewares"
-	db_repo "github.com/vivasoft-ltd/go-ems/repositories/db"
-	"github.com/vivasoft-ltd/go-ems/routes"
-	"github.com/vivasoft-ltd/go-ems/server"
-	"github.com/vivasoft-ltd/go-ems/services"
+	"github.com/tuhin47/go-ems/conn"
+	"github.com/tuhin47/go-ems/controllers"
+	"github.com/tuhin47/go-ems/middlewares"
+	db_repo "github.com/tuhin47/go-ems/repositories/db"
+	"github.com/tuhin47/go-ems/routes"
+	"github.com/tuhin47/go-ems/server"
+	"github.com/tuhin47/go-ems/services"
 )
 
 var serveCmd = &cobra.Command{

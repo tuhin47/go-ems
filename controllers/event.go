@@ -2,17 +2,17 @@ package controllers
 
 import (
 	"errors"
-	"github.com/vivasoft-ltd/go-ems/middlewares"
+	"github.com/tuhin47/go-ems/middlewares"
 	"net/http"
 	"strconv"
 
 	v "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/labstack/echo/v4"
-	"github.com/vivasoft-ltd/go-ems/domain"
-	"github.com/vivasoft-ltd/go-ems/types"
-	"github.com/vivasoft-ltd/go-ems/utils/errutil"
-	"github.com/vivasoft-ltd/go-ems/utils/msgutil"
-	"github.com/vivasoft-ltd/golang-course-utils/logger"
+	"github.com/tuhin47/go-ems/domain"
+	"github.com/tuhin47/go-ems/types"
+	"github.com/tuhin47/go-ems/utils/errutil"
+	"github.com/tuhin47/go-ems/utils/msgutil"
+	"github.com/tuhin47/golang-course-utils/logger"
 )
 
 type EventController struct {

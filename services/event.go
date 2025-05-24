@@ -3,10 +3,10 @@ package services
 import (
 	"errors"
 
-	"github.com/vivasoft-ltd/go-ems/domain"
-	"github.com/vivasoft-ltd/go-ems/models"
-	"github.com/vivasoft-ltd/go-ems/types"
-	"github.com/vivasoft-ltd/go-ems/utils/errutil"
+	"github.com/tuhin47/go-ems/domain"
+	"github.com/tuhin47/go-ems/models"
+	"github.com/tuhin47/go-ems/types"
+	"github.com/tuhin47/go-ems/utils/errutil"
 )
 
 type EventServiceImpl struct {

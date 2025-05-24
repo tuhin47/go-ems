@@ -3,9 +3,9 @@ package routes
 import (
 	"github.com/labstack/echo/v4"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"github.com/vivasoft-ltd/go-ems/consts"
-	"github.com/vivasoft-ltd/go-ems/controllers"
-	m "github.com/vivasoft-ltd/go-ems/middlewares"
+	"github.com/tuhin47/go-ems/consts"
+	"github.com/tuhin47/go-ems/controllers"
+	m "github.com/tuhin47/go-ems/middlewares"
 )
 
 type Routes struct {

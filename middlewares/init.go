@@ -3,7 +3,6 @@ package middlewares
 import (
 	"github.com/labstack/echo/v4"
 	m "github.com/labstack/echo/v4/middleware"
-	"github.com/vivasoft-ltd/golang-course-utils/monitor"
 )
 
 func Init(e *echo.Echo) {
@@ -27,5 +26,5 @@ func Init(e *echo.Echo) {
 		Level: 5,
 	}))
 
-	monitor.NewEchoPrometheusClient(e, &metricsPath)
+	//monitor.NewEchoPrometheusClient(e, &metricsPath)
 }
