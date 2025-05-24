@@ -3,7 +3,7 @@ package types
 import (
 	"time"
 
-	"github.com/vivasoft-ltd/go-ems/models"
+	"github.com/tuhin47/go-ems/models"
 )
 
 type EventReadRequest struct {

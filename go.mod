@@ -1,4 +1,4 @@
-module github.com/vivasoft-ltd/go-ems
+module github.com/tuhin47/go-ems
 
 go 1.24.2
 

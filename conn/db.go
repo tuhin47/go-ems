@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/labstack/gommon/log"
-	"github.com/vivasoft-ltd/go-ems/config"
+	"github.com/tuhin47/go-ems/config"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

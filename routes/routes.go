@@ -2,7 +2,7 @@ package routes
 
 import (
 	"github.com/labstack/echo/v4"
-	"github.com/vivasoft-ltd/go-ems/controllers"
+	"github.com/tuhin47/go-ems/controllers"
 )
 
 type Route struct {

@@ -5,10 +5,10 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo/v4"
-	"github.com/vivasoft-ltd/go-ems/domain"
-	"github.com/vivasoft-ltd/go-ems/types"
-	"github.com/vivasoft-ltd/go-ems/utils/errutil"
-	"github.com/vivasoft-ltd/go-ems/utils/msgutil"
+	"github.com/tuhin47/go-ems/domain"
+	"github.com/tuhin47/go-ems/types"
+	"github.com/tuhin47/go-ems/utils/errutil"
+	"github.com/tuhin47/go-ems/utils/msgutil"
 )
 
 type EventController struct {

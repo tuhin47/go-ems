@@ -1,8 +1,8 @@
 package domain
 
 import (
-	"github.com/vivasoft-ltd/go-ems/models"
-	"github.com/vivasoft-ltd/go-ems/types"
+	"github.com/tuhin47/go-ems/models"
+	"github.com/tuhin47/go-ems/types"
 )
 
 type EventRepository interface {

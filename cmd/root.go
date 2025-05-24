@@ -2,9 +2,9 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
-	"github.com/vivasoft-ltd/go-ems/config"
-	"github.com/vivasoft-ltd/go-ems/conn"
-	//"github.com/vivasoft-ltd/golang-course-utils/logger"
+	"github.com/tuhin47/go-ems/config"
+	"github.com/tuhin47/go-ems/conn"
+	//"github.com/tuhin47/golang-course-utils/logger"
 )
 
 var rootCmd = &cobra.Command{
