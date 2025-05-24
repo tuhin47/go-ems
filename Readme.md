@@ -132,7 +132,7 @@ docker compose up -d
 ```
 
 [7]: https://github.com/hibiken/asynq
-[6]: https://github.com/vivasoft-ltd/golang-course-utils
+[6]: https://github.com/tuhin47/golang-course-utils
 [5]: https://github.com/go-ozzo/ozzo-validation
 [4]: https://echo.labstack.com/docs/quick-start
 [3]: https://gorm.io/docs/index.html

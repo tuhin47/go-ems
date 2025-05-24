@@ -11,7 +11,7 @@ import (
 	"github.com/tuhin47/go-ems/types"
 	"github.com/tuhin47/go-ems/utils/errutil"
 	"github.com/tuhin47/go-ems/utils/msgutil"
-	//"github.com/tuhin47/golang-course-utils/logger"
+	"github.com/tuhin47/golang-course-utils/logger"
 )
 
 type EventController struct {
@@ -31,7 +31,7 @@ func (ctrl *EventController) CreateEvent(c echo.Context) error {
 	}
 
 	if err := req.Validate(); err != nil {
-		//logger.Error("validation error: %v", err)
+		logger.Error("validation error: %v", err)
 		return c.JSON(http.StatusBadRequest, &types.ValidationError{
 			Error: err,
 		})
@@ -61,7 +61,7 @@ func (ctrl *EventController) ReadEventByID(c echo.Context) error {
 
 	// Validate ID
 	if err := v.Validate(id, v.Required); err != nil {
-		//logger.Error("validation error: %v", err)
+		logger.Error("validation error: %v", err)
 		return c.JSON(http.StatusBadRequest, &types.ValidationError{
 			Error: err,
 		})
@@ -84,7 +84,7 @@ func (ctrl *EventController) UpdateEvent(c echo.Context) error {
 	}
 
 	if err := req.Validate(); err != nil {
-		//logger.Error("validation error: %v", err)
+		logger.Error("validation error: %v", err)
 		return c.JSON(http.StatusBadRequest, &types.ValidationError{
 			Error: err,
 		})
@@ -108,7 +108,7 @@ func (ctrl *EventController) DeleteEvent(c echo.Context) error {
 
 	// Validate ID
 	if err := v.Validate(id, v.Required); err != nil {
-		//logger.Error("validation error: %v", err)
+		logger.Error("validation error: %v", err)
 		return c.JSON(http.StatusBadRequest, &types.ValidationError{
 			Error: err,
 		})

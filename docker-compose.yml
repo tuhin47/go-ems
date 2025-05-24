@@ -3,17 +3,17 @@ services:
     image: consul:1.12
     container_name: vivasoft-golang-course-consul
     ports:
-      - "8501:8500"
+      - "8500:8500"
     networks:
       - go-ems
-    post_start:
-      - command: "consul kv put app @/consul/data/config.prod.json"
+#    post_start:
+#      - command: "consul kv put app @/consul/data/config.prod.json"
     volumes:
       - ./env/config.prod.json:/consul/data/config.prod.json # Mount the production config file
     restart: unless-stopped
 
   mysql:
-    image: "mysql:8.0.21"
+    image: "mysql:8.0"
     platform: linux/amd64  # Force x86 architecture for compatibility
     container_name: vivasoft-golang-course-mysql
     restart: unless-stopped
@@ -26,9 +26,7 @@ services:
       - MYSQL_ROOT_PASSWORD=pass1234
       - MYSQL_DATABASE=event_management
     ports:
-      - "3307:3306"
-    expose:
-      - 3306
+      - "3306:3306"
     networks:
       - go-ems
     healthcheck:
@@ -44,9 +42,7 @@ services:
     container_name: vivasoft-golang-course-redis
     restart: unless-stopped
     ports:
-      - "6380:6379"
-    expose:
-      - 6379
+      - "6379:6379"
     environment:
       - REDIS_PASSWORD=password123
     volumes:

@@ -2,9 +2,10 @@ package db
 
 import (
 	"errors"
+	"fmt"
 	"github.com/tuhin47/go-ems/models"
 	"github.com/tuhin47/go-ems/utils/errutil"
-	//"github.com/tuhin47/golang-course-utils/logger"
+	"github.com/tuhin47/golang-course-utils/logger"
 	"gorm.io/gorm"
 )
 
@@ -21,7 +22,7 @@ func NewEventRepositoryImpl(client *gorm.DB) *EventRepositoryImpl {
 func (repo *EventRepositoryImpl) CreateEvent(event *models.Event) (*models.Event, error) {
 	qry := repo.client.Create(event)
 	if qry.Error != nil {
-		//logger.Error(fmt.Errorf("error creating event: %w", qry.Error))
+		logger.Error(fmt.Errorf("error creating event: %w", qry.Error))
 		return nil, qry.Error
 	}
 
@@ -32,11 +33,11 @@ func (repo *EventRepositoryImpl) ListEvents() ([]*models.Event, error) {
 	var events []*models.Event
 	qry := repo.client.Find(&events)
 	if qry.RowsAffected == 0 {
-		//logger.Error("no events found")
+		logger.Error("no events found")
 		return nil, errutil.ErrRecordNotFound
 	}
 	if qry.Error != nil {
-		//logger.Error(fmt.Errorf("error listing events: %w", qry.Error))
+		logger.Error(fmt.Errorf("error listing events: %w", qry.Error))
 		return nil, qry.Error
 	}
 
@@ -47,11 +48,11 @@ func (repo *EventRepositoryImpl) ReadEventByID(id int) (*models.Event, error) {
 	var event models.Event
 	qry := repo.client.First(&event, id)
 	if errors.Is(qry.Error, gorm.ErrRecordNotFound) {
-		//logger.Error(fmt.Errorf("event with ID %d not found", id))
+		logger.Error(fmt.Errorf("event with ID %d not found", id))
 		return nil, errutil.ErrRecordNotFound
 	}
 	if qry.Error != nil {
-		//logger.Error(fmt.Errorf("error getting event by ID: %w", qry.Error))
+		logger.Error(fmt.Errorf("error getting event by ID: %w", qry.Error))
 		return nil, qry.Error
 	}
 
@@ -61,11 +62,11 @@ func (repo *EventRepositoryImpl) ReadEventByID(id int) (*models.Event, error) {
 func (repo *EventRepositoryImpl) UpdateEvent(event *models.Event) (*models.Event, error) {
 	qry := repo.client.Where("id = ?", event.ID).Updates(event)
 	if errors.Is(qry.Error, gorm.ErrRecordNotFound) {
-		//logger.Error(fmt.Errorf("no event found with ID %d", event.ID))
+		logger.Error(fmt.Errorf("no event found with ID %d", event.ID))
 		return nil, errutil.ErrRecordNotFound
 	}
 	if qry.Error != nil {
-		//logger.Error(fmt.Errorf("error updating event: %w", qry.Error))
+		logger.Error(fmt.Errorf("error updating event: %w", qry.Error))
 		return nil, qry.Error
 	}
 	return event, nil
@@ -74,11 +75,11 @@ func (repo *EventRepositoryImpl) UpdateEvent(event *models.Event) (*models.Event
 func (repo *EventRepositoryImpl) DeleteEvent(id int) error {
 	qry := repo.client.Where("id = ?", id).Delete(&models.Event{})
 	if qry.RowsAffected == 0 {
-		//logger.Error(fmt.Errorf("no event found with ID %d", id))
+		logger.Error(fmt.Errorf("no event found with ID %d", id))
 		return errutil.ErrRecordNotFound
 	}
 	if qry.Error != nil {
-		//logger.Error(fmt.Errorf("error deleting event: %w", qry.Error))
+		logger.Error(fmt.Errorf("error deleting event: %w", qry.Error))
 		return qry.Error
 	}
 	return nil
