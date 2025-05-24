@@ -2,7 +2,7 @@ package server
 
 import (
 	"github.com/labstack/echo/v4"
-	"github.com/vivasoft-ltd/go-ems/config"
+	"github.com/tuhin47/go-ems/config"
 )
 
 type Server struct {

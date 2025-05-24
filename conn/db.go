@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/vivasoft-ltd/go-ems/config"
-	log "github.com/vivasoft-ltd/golang-course-utils/logger"
+	"github.com/tuhin47/go-ems/config"
+	//log "github.com/tuhin47/golang-course-utils/logger"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
@@ -16,7 +16,7 @@ var db *gorm.DB
 func ConnectDb() {
 	conf := config.Db()
 
-	log.Info("connecting to mysql at ", conf.Host, ":", conf.Port, "...")
+	//log.Info("connecting to mysql at ", conf.Host, ":", conf.Port, "...")
 
 	logMode := logger.Silent
 	if conf.Debug {
@@ -50,7 +50,7 @@ func ConnectDb() {
 
 	db = dB
 
-	log.Info("mysql connection successful...")
+	//log.Info("mysql connection successful...")
 }
 
 func Db() *gorm.DB {

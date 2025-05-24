@@ -1,6 +1,6 @@
 package main
 
-import "github.com/vivasoft-ltd/go-ems/cmd"
+import "github.com/tuhin47/go-ems/cmd"
 
 func main() {
 	cmd.Execute()
