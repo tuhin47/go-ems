@@ -10,7 +10,8 @@ type EventReadRequest struct {
 	ID int `param:"id"`
 }
 
-type EventCreateRequest struct {
+type EventUpsertRequest struct {
+	ID          *int    `param:"id"`
 	Title       string  `json:"title"`
 	Description *string `json:"description"`
 	Location    *string `json:"location"`
@@ -24,20 +25,19 @@ type EventCreateResponse struct {
 	Event   *models.Event `json:"event"`
 }
 
-func (ecreq *EventCreateRequest) ToEvent() *models.Event {
+func (req *EventUpsertRequest) ToEvent() *models.Event {
 	event := &models.Event{
-		Title:       ecreq.Title,
-		Description: ecreq.Description,
-		Location:    ecreq.Location,
-		CreatedBy:   ecreq.CreatedBy,
+		Title:       req.Title,
+		Description: req.Description,
+		Location:    req.Location,
+		CreatedBy:   req.CreatedBy,
 	}
-
-	if ecreq.StartTime != nil && len(*ecreq.StartTime) > 0 {
-		t, _ := time.Parse(time.RFC3339, *ecreq.StartTime)
+	if req.StartTime != nil && len(*req.StartTime) > 0 {
+		t, _ := time.Parse(time.RFC3339, *req.StartTime)
 		event.StartTime = &t
 	}
-	if ecreq.EndTime != nil && len(*ecreq.EndTime) > 0 {
-		t, _ := time.Parse(time.RFC3339, *ecreq.EndTime)
+	if req.EndTime != nil && len(*req.EndTime) > 0 {
+		t, _ := time.Parse(time.RFC3339, *req.EndTime)
 		event.EndTime = &t
 	}
 	return event

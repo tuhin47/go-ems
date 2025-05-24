@@ -28,4 +28,7 @@ func (r *Route) Init() {
 	g := e.Group("/v1")
 	g.POST("/events", r.eventCtrl.CreateEvent)
 	g.GET("/events/:id", r.eventCtrl.ReadEventByID)
+	g.GET("/events", r.eventCtrl.ListEvents)
+	g.DELETE("/events/:id", r.eventCtrl.DeleteEvent)
+	g.PUT("/events/:id", r.eventCtrl.UpdateEvent)
 }

@@ -49,3 +49,22 @@ func (r *RepositoryImpl) ListEvents() ([]*models.Event, error) {
 	}
 	return events, nil
 }
+
+func (r *RepositoryImpl) DeleteEvent(id int) error {
+	qry := r.client.Delete(&models.Event{}, id)
+	if qry.RowsAffected == 0 {
+		return errutil.ErrRecordNotFound
+	}
+	return qry.Error
+}
+
+func (r *RepositoryImpl) UpdateEvent(event *models.Event) (*models.Event, error) {
+	qry := r.client.Model(&models.Event{}).Where("id = ?", event.ID).Updates(event)
+	if qry.RowsAffected == 0 {
+		return nil, errutil.ErrRecordNotFound
+	}
+	if qry.Error != nil {
+		return nil, qry.Error
+	}
+	return event, nil
+}

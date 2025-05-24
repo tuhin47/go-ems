@@ -36,3 +36,7 @@ func InvalidID() Data {
 func RecordNotFound() Data {
 	return NewMessage().Set("error", "Record not found").Done()
 }
+
+func EventDeletedSuccessfully() Data {
+	return NewMessage().Set("message", "Event deleted successfully").Done()
+}
