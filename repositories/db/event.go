@@ -3,6 +3,7 @@ package db
 import (
 	"errors"
 	"fmt"
+	"github.com/tuhin47/go-ems/consts"
 	"github.com/tuhin47/go-ems/models"
 	"github.com/tuhin47/go-ems/types"
 	"github.com/tuhin47/go-ems/utils/errutil"

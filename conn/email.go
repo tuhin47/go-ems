@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/vivasoft-ltd/go-ems/config"
+	"github.com/tuhin47/go-ems/config"
 )
 
 var emailClient *http.Client

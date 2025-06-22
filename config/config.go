@@ -206,4 +206,8 @@ func setDefaultConfig() {
 		AccessTokenExpiry:  3600,
 		RefreshTokenExpiry: 24 * time.Hour,
 	}
+	config.Email = &EmailConfig{
+		Url:     "https://webhook.site/eb85831b-dedc-48ce-aace-1efe0b79ad41",
+		Timeout: time.Minute,
+	}
 }

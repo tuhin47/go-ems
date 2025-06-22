@@ -1,6 +1,6 @@
 package domain
 
-import "github.com/vivasoft-ltd/go-ems/models"
+import "github.com/tuhin47/go-ems/models"
 
 type (
 	MailService interface {

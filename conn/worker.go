@@ -1,8 +1,8 @@
 package conn
 
 import (
-	"github.com/vivasoft-ltd/go-ems/config"
-	"github.com/vivasoft-ltd/go-ems/worker"
+	"github.com/tuhin47/go-ems/config"
+	"github.com/tuhin47/go-ems/worker"
 )
 
 var workerPool *worker.Pool

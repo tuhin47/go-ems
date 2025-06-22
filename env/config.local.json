@@ -1,7 +1,8 @@
 {
   "app": {
     "name": "event-management-service",
-    "port": "8080"
+    "port": "8080",
+    "numberOfWorkers" : 5
   },
   "db": {
     "host": "127.0.0.1",
@@ -46,5 +47,9 @@
     "refreshTokenSecret": "e9d4c3b2-a1f7-4e6d-8c3b-2a1e9d4c3b2f",
     "accessTokenExpiry": 3600,
     "refreshTokenExpiry": 86400
+  },
+  "email": {
+    "url": "https://webhook.site/eb85831b-dedc-48ce-aace-1efe0b79ad41",
+    "timeout": "60s"
   }
 }
