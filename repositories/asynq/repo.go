@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/hibiken/asynq"
-	"github.com/vivasoft-ltd/go-ems/config"
-	"github.com/vivasoft-ltd/go-ems/types"
-	"github.com/vivasoft-ltd/golang-course-utils/logger"
+	"github.com/tuhin47/go-ems/config"
+	"github.com/tuhin47/go-ems/types"
+	"github.com/tuhin47/golang-course-utils/logger"
 )
 
 type Repository struct {

@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/vivasoft-ltd/go-ems/config"
-	"github.com/vivasoft-ltd/go-ems/types"
+	"github.com/tuhin47/go-ems/config"
+	"github.com/tuhin47/go-ems/types"
 )
 
 type Repository struct {

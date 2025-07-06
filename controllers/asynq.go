@@ -6,10 +6,10 @@ import (
 	"fmt"
 
 	"github.com/hibiken/asynq"
-	"github.com/vivasoft-ltd/go-ems/domain"
-	"github.com/vivasoft-ltd/go-ems/models"
-	"github.com/vivasoft-ltd/go-ems/types"
-	"github.com/vivasoft-ltd/golang-course-utils/logger"
+	"github.com/tuhin47/go-ems/domain"
+	"github.com/tuhin47/go-ems/models"
+	"github.com/tuhin47/go-ems/types"
+	"github.com/tuhin47/golang-course-utils/logger"
 )
 
 type AsynqController struct {

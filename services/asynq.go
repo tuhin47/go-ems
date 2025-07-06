@@ -6,13 +6,13 @@ import (
 	"time"
 
 	"github.com/hibiken/asynq"
-	"github.com/vivasoft-ltd/go-ems/config"
-	"github.com/vivasoft-ltd/go-ems/consts"
-	"github.com/vivasoft-ltd/go-ems/domain"
-	"github.com/vivasoft-ltd/go-ems/models"
-	"github.com/vivasoft-ltd/go-ems/types"
-	"github.com/vivasoft-ltd/go-ems/utils/errutil"
-	"github.com/vivasoft-ltd/golang-course-utils/logger"
+	"github.com/tuhin47/go-ems/config"
+	"github.com/tuhin47/go-ems/consts"
+	"github.com/tuhin47/go-ems/domain"
+	"github.com/tuhin47/go-ems/models"
+	"github.com/tuhin47/go-ems/types"
+	"github.com/tuhin47/go-ems/utils/errutil"
+	"github.com/tuhin47/golang-course-utils/logger"
 )
 
 type AsynqService struct {
@@ -176,7 +176,7 @@ func (svc *AsynqService) enqueueTask(task *asynq.Task, customOpts *types.AsynqOp
 
 	taskID, err = svc.asynqRepo.EnqueueTask(task, customOpts)
 	if errors.Is(err, asynq.ErrDuplicateTask) {
-		logger.Warn(fmt.Sprintf("skipped: duplicate task for taskID: [%s]", customOpts.TaskID))
+		//logger.Warn(fmt.Sprintf("skipped: duplicate task for taskID: [%s]", customOpts.TaskID))
 		err = nil // No error for duplicate tasks, just skip
 		return
 	}

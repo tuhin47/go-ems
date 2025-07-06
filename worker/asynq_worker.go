@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/hibiken/asynq"
-	"github.com/vivasoft-ltd/go-ems/config"
-	"github.com/vivasoft-ltd/go-ems/types"
+	"github.com/tuhin47/go-ems/config"
+	"github.com/tuhin47/go-ems/types"
 )
 
 func StartAsynqWorker(mux *asynq.ServeMux) {

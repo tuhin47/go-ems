@@ -3,15 +3,15 @@ package cmd
 import (
 	asynq_ "github.com/hibiken/asynq"
 	"github.com/spf13/cobra"
-	"github.com/vivasoft-ltd/go-ems/config"
-	"github.com/vivasoft-ltd/go-ems/conn"
-	"github.com/vivasoft-ltd/go-ems/controllers"
-	asynq_repo "github.com/vivasoft-ltd/go-ems/repositories/asynq"
-	db_repo "github.com/vivasoft-ltd/go-ems/repositories/db"
-	mail_repo "github.com/vivasoft-ltd/go-ems/repositories/mail"
-	"github.com/vivasoft-ltd/go-ems/services"
-	"github.com/vivasoft-ltd/go-ems/types"
-	"github.com/vivasoft-ltd/go-ems/worker"
+	"github.com/tuhin47/go-ems/config"
+	"github.com/tuhin47/go-ems/conn"
+	"github.com/tuhin47/go-ems/controllers"
+	asynq_repo "github.com/tuhin47/go-ems/repositories/asynq"
+	db_repo "github.com/tuhin47/go-ems/repositories/db"
+	mail_repo "github.com/tuhin47/go-ems/repositories/mail"
+	"github.com/tuhin47/go-ems/services"
+	"github.com/tuhin47/go-ems/types"
+	"github.com/tuhin47/go-ems/worker"
 )
 
 var workerCmd = &cobra.Command{

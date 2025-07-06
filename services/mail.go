@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tuhin47/go-ems/config"
 	"github.com/tuhin47/go-ems/consts"
 	"github.com/tuhin47/go-ems/domain"
 	"github.com/tuhin47/go-ems/models"
