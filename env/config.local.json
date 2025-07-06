@@ -36,7 +36,15 @@
     "queue": "event-management",
     "retention": 168,
     "retryCount": 25,
-    "delay": 0
+    "delay": 0,
+    "emailInvitationTaskDelay": 0,
+    "emailInvitationTaskRetryCount": 5,
+    "emailInvitationTaskRetryDelay": 30,
+    "eventReminderTaskRetryCount": 5,
+    "eventReminderTaskRetryDelay": 30,
+    "eventReminderEmailTaskDelay": 0,
+    "eventReminderEmailTaskRetryCount": 5,
+    "eventReminderEmailTaskRetryDelay": 30
   },
   "logger": {
     "level": "debug",
